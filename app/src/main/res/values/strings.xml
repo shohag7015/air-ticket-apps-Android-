@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Air Ticket</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="book_now">Book Now</string>
+    <string name="confirm_payment">Confirm Payment</string>
+    <string name="payment">Payment</string>
+    <string name="booking_history">Booking History</string>
+</resources>

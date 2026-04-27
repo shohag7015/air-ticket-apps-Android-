@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Payment Method"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgPaymentMethods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Card Payment Option -->
+            <RadioButton
+                android:id="@+id/rbCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Credit / Debit Card"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:background="@android:color/white"
+                android:layout_marginBottom="10dp"
+                android:checked="true"/>
+
+            <!-- BKash Payment Option -->
+            <RadioButton
+                android:id="@+id/rbBkash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="bKash Mobile Payment"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:background="@android:color/white"
+                android:layout_marginBottom="20dp"/>
+        </RadioGroup>
+
+        <!-- Card Details Section -->
+        <LinearLayout
+            android:id="@+id/layoutCardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="15dp"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:id="@+id/etCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Card Number (16 digits)"
+                android:inputType="number"
+                android:maxLength="16"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/etExpiry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="MM/YY"
+                    android:inputType="date"/>
+                <EditText
+                    android:id="@+id/etCVV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="CVV"
+                    android:inputType="numberPassword"
+                    android:maxLength="3"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- bKash Details Section -->
+        <LinearLayout
+            android:id="@+id/layoutBkashDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter bKash Number"
+                android:textColor="#E2136E"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etBkashNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="01XXXXXXXXX"
+                android:inputType="phone"
+                android:maxLength="11"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total: 0 BDT"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="PAY NOW"
+            android:textSize="18sp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+</ScrollView>
